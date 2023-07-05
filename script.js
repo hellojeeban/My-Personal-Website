@@ -47,4 +47,10 @@ for (var i = 0; i < navLinks.length; i++) {
     menuBtn.style.pointerEvents = "auto";
   });
 }
-
+(function () {
+    var words = ["Frontend developer","Photographer","Youtuber","Happy Person" ],
+    i = 0;
+    setInterval(function(){ $('#words').fadeOut(function(){
+        $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+      }); }, 3000)
+  })();
